@@ -1,0 +1,7 @@
+{
+  "name": "SwampSpots",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
