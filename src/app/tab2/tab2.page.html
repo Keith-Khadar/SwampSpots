@@ -15,15 +15,31 @@
 
   <ion-grid>
     <ion-row>
+      <ion-input placeholder="Enter your name" class="centered"></ion-input>
+      <ion-button class="centered">search</ion-button>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
       <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
         <ion-img [src]="photo.webviewPath" (click)="showActionSheet(photo, position)"></ion-img>
+        <ion-input placeholder="Title" style="text-align: center;"></ion-input>
+        <ion-item counter="true">
+          <ion-input placeholder="Caption" maxlength="50" style="text-align: center;"></ion-input>
+        </ion-item>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
     <ion-fab-button (click)="addPhotoToGallery()">
       <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="save-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 </ion-content>
