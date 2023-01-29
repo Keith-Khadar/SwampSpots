@@ -1,3 +1,4 @@
+import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -8,7 +9,7 @@ import { SwiperModule } from 'swiper/angular';
 @NgModule({
   declarations: [SlidercardsComponent],
   imports: [
-    CommonModule, SwiperModule
+    CommonModule, SwiperModule, IonicModule
   ],
   exports:[SlidercardsComponent]
 })
