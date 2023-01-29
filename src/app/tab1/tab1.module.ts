@@ -7,13 +7,17 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 
+import { SlidercardsModule } from '../slidercards/slidercards.module';
+
+
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    SlidercardsModule
   ],
   declarations: [Tab1Page]
 })
